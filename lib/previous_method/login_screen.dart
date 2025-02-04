@@ -27,8 +27,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
     final response = await http.post(url,
         // headers: {'Content-Type': 'application/json'},
-        
-         body: data
+
+        body: data
 
         // jsonEncode({
         //   'email': emailController.text,
