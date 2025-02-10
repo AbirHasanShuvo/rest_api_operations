@@ -32,13 +32,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: List.generate(users.length, (index) {
             return Container(
               margin: const EdgeInsets.only(bottom: 15),
               width: 100,
               height: 50,
               color: Colors.red,
-              child: Text(users[index].name!.first),
+              child: Center(child: Text(users[index].name!.first)),
             );
           }),
         ),
