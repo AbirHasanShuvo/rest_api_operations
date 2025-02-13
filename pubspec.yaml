@@ -40,6 +40,8 @@ dependencies:
   chewie: ^1.10.0
   video_player: ^2.9.2
   better_player_plus: ^1.0.8
+  youtube_explode_dart: ^2.3.9
+  youtube_player_flutter: ^9.1.1
 
 dev_dependencies:
   flutter_test:

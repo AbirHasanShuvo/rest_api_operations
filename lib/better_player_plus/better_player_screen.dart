@@ -24,7 +24,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     );
 
     BetterPlayerConfiguration betterPlayerConfiguration =
-    const BetterPlayerConfiguration(
+        const BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
       autoPlay: true,
