@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:restapi_testing/better_player_plus/better_player_screen.dart';
 import 'package:restapi_testing/check_links/check_links.dart';
 import 'package:restapi_testing/chewei_video_player/chewei_screen.dart';
+import 'package:restapi_testing/edu_tv/course_screen.dart';
 
 import 'package:video_player/video_player.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
 
       //is vscode better for flutter development or not or not it is using ?
       //hello World all
-      home: CheckLinks(),
+      home: CourseScreen(),
     );
   }
 }

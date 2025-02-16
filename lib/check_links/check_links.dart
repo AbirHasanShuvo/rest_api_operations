@@ -17,16 +17,17 @@ class CheckLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String url1 = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-    String url2 = "https://youtu.be/dQw4w9WgXcQ";
-    String url3 = "https://example.com";
     return Scaffold(
       body: Center(
         child: ElevatedButton(
             onPressed: () {
+              String url1 = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+              String url2 = "https://youtu.be/dQw4w9WgXcQ";
+              String url3 = "https://example.com";
 
-
-              Get.snackbar("youTube link check", isYouTubeUrl(url3).toString());
+              print(isYouTubeUrl(url1)); // true
+              print(isYouTubeUrl(url2)); // true
+              print(isYouTubeUrl(url3));
             },
             child: Text("Check youTube links")),
       ),
