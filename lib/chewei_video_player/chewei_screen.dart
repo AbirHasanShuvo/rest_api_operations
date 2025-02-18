@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:restapi_testing/chewei_getx/new_screen.dart';
 import 'package:video_player/video_player.dart';
 
 class CheweiScreen extends StatefulWidget {
@@ -46,7 +48,6 @@ class _CheweiScreenState extends State<CheweiScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _videoPlayerController.dispose();
     _chewieController.dispose();
     super.dispose();
@@ -61,7 +62,15 @@ class _CheweiScreenState extends State<CheweiScreen> {
           AspectRatio(
             aspectRatio: 16 / 9,
             child: Chewie(controller: _chewieController),
-          )
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Get.to(() => NewScreenGetx());
+              },
+              child: Text("NAVIGATE_TO_OTHER_SCREEN"))
         ],
       ),
     );

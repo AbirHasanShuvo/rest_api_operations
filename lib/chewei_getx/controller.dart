@@ -1,17 +1,17 @@
 import 'dart:io';
 import 'package:chewie/chewie.dart';
-
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
 
-class VideoController extends GetxController {
+class ChewieControllerX extends GetxController {
   late VideoPlayerController videoPlayerController;
   late ChewieController chewieController;
 
   final String url;
   final DataSourceType dataSourceType;
 
-  VideoController({required this.url, required this.dataSourceType});
+  ChewieControllerX({required this.url, required this.dataSourceType});
 
   @override
   void onInit() {
@@ -32,11 +32,15 @@ class VideoController extends GetxController {
             VideoPlayerController.contentUri(Uri.parse(url));
         break;
     }
-
     chewieController = ChewieController(
       videoPlayerController: videoPlayerController,
       aspectRatio: 16 / 9,
     );
+  }
+
+  void stopVideo() {
+    chewieController.pause();
+    videoPlayerController.pause();
   }
 
   @override
