@@ -33,9 +33,7 @@ class ChewieControllerX extends GetxController {
         break;
     }
     chewieController = ChewieController(
-      videoPlayerController: videoPlayerController,
-      aspectRatio: 16 / 9,
-    );
+        videoPlayerController: videoPlayerController, aspectRatio: 16 / 9);
   }
 
   void stopVideo() {

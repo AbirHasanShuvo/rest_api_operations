@@ -48,6 +48,7 @@ class _CheweiScreenState extends State<CheweiScreen> {
 
   @override
   void dispose() {
+
     _videoPlayerController.dispose();
     _chewieController.dispose();
     super.dispose();
@@ -57,12 +58,12 @@ class _CheweiScreenState extends State<CheweiScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+
         children: [
-          AspectRatio(
-            aspectRatio: 16 / 9,
-            child: Chewie(controller: _chewieController),
-          ),
+          SizedBox(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.4, // Adjust as needed
+              child: Chewie(controller: _chewieController)),
           const SizedBox(
             height: 30,
           ),

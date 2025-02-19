@@ -23,14 +23,13 @@ class ChewieScreenGetx extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          AspectRatio(
-            aspectRatio: 16 / 9,
-            child: GetBuilder<ChewieControllerX>(
-              builder: (controller) =>
-                  Chewie(controller: controller.chewieController),
-            ),
+          GetBuilder<ChewieControllerX>(
+            builder: (controller) =>
+                SizedBox(
+                    width: double.infinity,
+                    height: MediaQuery.of(context).size.height * 0.4, // Adjust as needed
+                    child: Chewie(controller: controller.chewieController)),
           ),
-
           const SizedBox(
             height: 30,
           ),
