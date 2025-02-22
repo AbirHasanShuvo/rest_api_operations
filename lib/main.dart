@@ -8,7 +8,7 @@ import 'package:restapi_testing/chewei_getx/previous_screen.dart';
 import 'package:restapi_testing/edu_tv/course_screen.dart';
 import 'package:restapi_testing/youtube_explode/youtube_player.dart';
 import 'package:restapi_testing/youtube_player/youtube_player.dart';
-
+import 'package:restapi_testing/youtube_player_with_fullscreen/youtube_player_flutter.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -21,14 +21,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home: ChewieScreenGetx(
-            url: 'https://d3akx1ripsfmw0.cloudfront.net/intro_video_6496a646b115e.mp4',
-            dataSourceType: DataSourceType.network)
-        // home: ChewieScreenGetx(
-        //   url: 'https://www.w3schools.com/html/mov_bbb.mp4',
-        //   dataSourceType:
-        //       DataSourceType.network, // Use the correct DataSourceType
-        // ),
-        );
+        home:
+
+            // ChewieScreenGetx(
+            //     url:
+            //         'https://d3akx1ripsfmw0.cloudfront.net/intro_video_6496a646b115e.mp4',
+            //     dataSourceType: DataSourceType.network),
+
+            YoutubePlayerScreen());
   }
 }
