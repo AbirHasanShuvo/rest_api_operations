@@ -2,8 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: YoutubePlayerScreen(),
+    );
+  }
+}
+
 class YoutubePlayerControllerX extends GetxController {
-  final String videoUrl = "https://www.youtube.com/watch?v=A3QkmsuGvx8";
+  final String videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   late YoutubePlayerController controller;
 
   @override
@@ -36,35 +50,41 @@ class YoutubePlayerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false, // Prevents UI shifts
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: Text("YouTube Player")),
-      body: YoutubePlayerBuilder(
-        player: YoutubePlayer(
-          controller: controllerX.controller,
-          showVideoProgressIndicator: true,
-          onReady: () {
-            print("Player is ready.");
-          },
-        ),
-        builder: (context, player) {
-          return SafeArea(
-            child: Column(
-              children: [
-                // Ensures the player maintains correct aspect ratio
-                Container(
-                  width: double.infinity,
-                  child: player,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Get.to(SecondScreen());
+      body: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Flexible(
+              child: YoutubePlayerBuilder(
+                player: YoutubePlayer(
+                  controller: controllerX.controller,
+                  showVideoProgressIndicator: true,
+                  onReady: () {
+                    print("Player is ready.");
                   },
-                  child: Text("Go to Next Screen"),
                 ),
-              ],
+                builder: (context, player) {
+                  return Column(
+                    children: [
+                      AspectRatio(
+                        aspectRatio: 16 / 9,
+                        child: player,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Get.to(SecondScreen());
+                        },
+                        child: Text("Go to Next Screen"),
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
-          );
-        },
+          ],
+        ),
       ),
     );
   }
