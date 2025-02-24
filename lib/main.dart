@@ -7,7 +7,8 @@ import 'package:restapi_testing/chewei_video_player/chewei_screen.dart';
 import 'package:restapi_testing/chewei_getx/previous_screen.dart';
 import 'package:restapi_testing/edu_tv/course_screen.dart';
 import 'package:restapi_testing/youtube_explode/youtube_player.dart';
-import 'package:restapi_testing/youtube_fullscreen/youtube_fullscreen_getx.dart';
+import 'package:restapi_testing/youtube_fullscreen/youtube_fullscreen_getxurl.dart';
+import 'package:restapi_testing/youtube_fullscreen/youtube_fullscreen_url.dart';
 import 'package:restapi_testing/youtube_fullscreen/youtube_iframe.dart';
 import 'package:restapi_testing/youtube_player/youtube_player.dart';
 import 'package:video_player/video_player.dart';
@@ -29,6 +30,8 @@ class MyApp extends StatelessWidget {
             //         'https://d3akx1ripsfmw0.cloudfront.net/intro_video_6496a646b115e.mp4',
             //     dataSourceType: DataSourceType.network),
 
-            YoutubeScreenFullGetx());
+            YoutubeScreenFullUrl(
+                youtubeUrl:
+                    "https://www.youtube.com/watch?v=7kYwJKZ8RTE&list=RD7kYwJKZ8RTE&start_radio=1"));
   }
 }

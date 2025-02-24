@@ -2,16 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:get/get.dart';
 
+//it has bottom pixel error
 class YoutubeController extends GetxController {
   late YoutubePlayerController youtubePlayerController;
 
-  @override
-  void onInit() {
-    super.onInit();
+  // Function to extract video ID from the URL
+  String extractVideoId(String url) {
+    final uri = Uri.parse(url);
+    String videoId = '';
+
+    if (uri.host == 'www.youtube.com' || uri.host == 'youtube.com') {
+      videoId = Uri.parse(url).queryParameters['v'] ?? '';
+    } else if (uri.host == 'youtu.be') {
+      videoId = uri.pathSegments.first;
+    }
+    return videoId;
+  }
+
+  // Initialize the YoutubePlayerController with the extracted video ID
+  void initPlayer(String url) {
+    final videoId = extractVideoId(url);
+
     youtubePlayerController = YoutubePlayerController(
-      initialVideoId: 'dQw4w9WgXcQ', // Replace with your video ID
+      initialVideoId: videoId,
       flags: YoutubePlayerFlags(
-        autoPlay: false,
+        autoPlay: true,
         mute: false,
         enableCaption: true,
       ),
@@ -25,13 +40,22 @@ class YoutubeController extends GetxController {
   }
 }
 
-class YoutubeScreenFullGetx extends StatelessWidget {
+class YoutubeScreenFullUrlGetx extends StatelessWidget {
+  final String youtubeUrl;
+
+  // Accept a YouTube URL when creating the screen
+  YoutubeScreenFullUrlGetx({required this.youtubeUrl});
+
   @override
   Widget build(BuildContext context) {
-    // Initialize the controller using GetX
+    // Initialize the YoutubeController using GetX
     final YoutubeController youtubeController = Get.put(YoutubeController());
 
+    // Initialize the player with the YouTube URL
+    youtubeController.initPlayer(youtubeUrl);
+
     return Scaffold(
+      appBar: AppBar(title: Text("YouTube Player")),
       body: Column(
         children: [
           YoutubePlayerBuilder(
