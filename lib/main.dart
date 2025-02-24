@@ -7,8 +7,8 @@ import 'package:restapi_testing/chewei_video_player/chewei_screen.dart';
 import 'package:restapi_testing/chewei_getx/previous_screen.dart';
 import 'package:restapi_testing/edu_tv/course_screen.dart';
 import 'package:restapi_testing/youtube_explode/youtube_player.dart';
+import 'package:restapi_testing/youtube_fullscreen/youtube_iframe.dart';
 import 'package:restapi_testing/youtube_player/youtube_player.dart';
-import 'package:restapi_testing/youtube_player_with_fullscreen/youtube_player_flutter.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -28,6 +28,6 @@ class MyApp extends StatelessWidget {
             //         'https://d3akx1ripsfmw0.cloudfront.net/intro_video_6496a646b115e.mp4',
             //     dataSourceType: DataSourceType.network),
 
-            YoutubePlayerScreen());
+            YoutubeScreenFull());
   }
 }
