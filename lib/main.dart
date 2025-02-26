@@ -5,6 +5,7 @@ import 'package:restapi_testing/check_links/check_links.dart';
 import 'package:restapi_testing/chewei_getx/screen.dart';
 import 'package:restapi_testing/chewei_video_player/chewei_screen.dart';
 import 'package:restapi_testing/chewei_getx/previous_screen.dart';
+import 'package:restapi_testing/course_instructor/view.dart';
 import 'package:restapi_testing/edu_tv/course_screen.dart';
 import 'package:restapi_testing/youtube_explode/youtube_player.dart';
 import 'package:restapi_testing/youtube_fullscreen/youtube_fullscreen_getxurl.dart';
@@ -23,15 +24,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        home:
+        home : InstructorScreen()
+        // YoutubeScreenFullUrl(
+        //     youtubeUrl:
+        //         "https://www.youtube.com/watch?v=7kYwJKZ8RTE&list=RD7kYwJKZ8RTE&start_radio=1")
 
-            // ChewieScreenGetx(
-            //     url:
-            //         'https://d3akx1ripsfmw0.cloudfront.net/intro_video_6496a646b115e.mp4',
-            //     dataSourceType: DataSourceType.network),
-
-            YoutubeScreenFullUrl(
-                youtubeUrl:
-                    "https://www.youtube.com/watch?v=7kYwJKZ8RTE&list=RD7kYwJKZ8RTE&start_radio=1"));
+    );
   }
 }
