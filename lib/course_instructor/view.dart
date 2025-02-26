@@ -4,38 +4,32 @@ import 'package:restapi_testing/course_instructor/controller.dart';
 
 
 class InstructorScreen extends StatelessWidget {
-  final InstructorController controller = Get.put(InstructorController());
+  final InstructorController instructorController = Get.put(InstructorController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("Instructors")),
       body: Obx(() {
-        if (controller.isLoading.value) {
+        if (instructorController.isLoading.value) {
           return Center(child: CircularProgressIndicator());
         }
-
-        if (controller.instructors.isEmpty) {
-          return Center(child: Text("No instructors found."));
+        if (instructorController.instructors.isEmpty) {
+          return Center(child: Text("No Instructors Found"));
         }
-
         return ListView.builder(
-          itemCount: controller.instructors.length,
+          itemCount: instructorController.instructors.length,
           itemBuilder: (context, index) {
-            final instructor = controller.instructors[index];
-
+            final instructor = instructorController.instructors[index];
             return Card(
               margin: EdgeInsets.all(10),
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundImage: NetworkImage(instructor.image),
+                  backgroundImage: NetworkImage("https://admin.edubd.tv/${instructor.image}"),
                 ),
-                title: Text("${instructor.firstName} ${instructor.lastName}"),
-                subtitle: Text(instructor.bio),
-                trailing: Icon(Icons.arrow_forward),
-                onTap: () {
-                  Get.snackbar("Instructor", "${instructor.username}");
-                },
+                title: Text(instructor.firstName),
+                subtitle: Text(instructor.email),
+                trailing: Text(instructor.experience),
               ),
             );
           },
