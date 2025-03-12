@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 import 'package:restapi_testing/edu_tv/course_model.dart';
 

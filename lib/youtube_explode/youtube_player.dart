@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 class VideoPlayerScreen extends StatefulWidget {
-  VideoPlayerScreen(this.videoUrl);
+  const VideoPlayerScreen(this.videoUrl, {super.key});
 
   final String videoUrl;
 

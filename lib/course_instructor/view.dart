@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restapi_testing/course_instructor/controller.dart';
 
-
 class InstructorScreen extends StatelessWidget {
-  final InstructorController instructorController = Get.put(InstructorController());
+  final InstructorController instructorController =
+      Get.put(InstructorController());
+
+  InstructorScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,8 @@ class InstructorScreen extends StatelessWidget {
               margin: EdgeInsets.all(10),
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundImage: NetworkImage("https://admin.edubd.tv/${instructor.image}"),
+                  backgroundImage: NetworkImage(
+                      "https://admin.edubd.tv/${instructor.image}"),
                 ),
                 title: Text(instructor.firstName),
                 subtitle: Text(instructor.email),

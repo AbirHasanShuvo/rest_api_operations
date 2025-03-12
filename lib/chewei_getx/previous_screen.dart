@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restapi_testing/chewei_video_player/chewei_screen.dart';
 import 'package:video_player/video_player.dart';
 
 import 'screen.dart';

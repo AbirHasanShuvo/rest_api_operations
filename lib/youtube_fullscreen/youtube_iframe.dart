@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class YoutubeScreenFull extends StatefulWidget {
+  const YoutubeScreenFull({super.key});
+
   @override
   _YoutubeScreenState createState() => _YoutubeScreenState();
 }

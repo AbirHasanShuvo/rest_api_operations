@@ -5,6 +5,8 @@ import 'package:restapi_testing/edu_tv/controller.dart';
 class CourseScreen extends StatelessWidget {
   final CourseController courseController = Get.put(CourseController());
 
+  CourseScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

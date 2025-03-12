@@ -44,7 +44,7 @@ class YoutubeScreenFullUrlGetx extends StatelessWidget {
   final String youtubeUrl;
 
   // Accept a YouTube URL when creating the screen
-  YoutubeScreenFullUrlGetx({required this.youtubeUrl});
+  const YoutubeScreenFullUrlGetx({super.key, required this.youtubeUrl});
 
   @override
   Widget build(BuildContext context) {

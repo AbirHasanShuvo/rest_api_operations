@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class YoutubePlayerFlutter extends StatelessWidget {
   const YoutubePlayerFlutter({super.key});

@@ -5,7 +5,7 @@ class YoutubeScreenFullUrl extends StatefulWidget {
   final String youtubeUrl;
 
   // Accept a YouTube URL when creating the screen
-  YoutubeScreenFullUrl({required this.youtubeUrl});
+  const YoutubeScreenFullUrl({super.key, required this.youtubeUrl});
 
   @override
   _YoutubeScreenState createState() => _YoutubeScreenState();

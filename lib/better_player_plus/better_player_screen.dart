@@ -2,6 +2,8 @@ import 'package:better_player_plus/better_player_plus.dart';
 import 'package:flutter/material.dart';
 
 class VideoPlayerScreen extends StatefulWidget {
+  const VideoPlayerScreen({super.key});
+
   @override
   _VideoPlayerScreenState createState() => _VideoPlayerScreenState();
 }
