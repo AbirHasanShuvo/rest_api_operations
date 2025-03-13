@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:restapi_testing/aamar_pay/player/player.dart';
 
-import 'package:restapi_testing/aamar_pay/view.dart';
+
 
 void main() {
   runApp(MyApp());
