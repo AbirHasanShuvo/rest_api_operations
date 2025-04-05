@@ -1,0 +1,2 @@
+E:/eclipse/test_purpose/restapi_testing/android/app/.cxx/RelWithDebInfo/5q5z1w3p/x86_64/CMakeFiles/edit_cache.dir
+E:/eclipse/test_purpose/restapi_testing/android/app/.cxx/RelWithDebInfo/5q5z1w3p/x86_64/CMakeFiles/rebuild_cache.dir
