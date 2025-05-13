@@ -2,6 +2,8 @@ import 'package:aamarpay/aamarpay.dart';
 import 'package:flutter/material.dart';
 
 class MyPay extends StatefulWidget {
+  const MyPay({super.key});
+
   @override
   _MyPayState createState() => _MyPayState();
 }
@@ -36,9 +38,9 @@ class _MyPayState extends State<MyPay> {
           customerMobile: "01834760591",
           customerName: "Masum Billah Sanjid",
           // That is the test signature key. But when you go to the production you must use your own signature key
-          signature: "dbb74894e82415a2f7ff0ec3a97e4183",
+          signature: "bd72b6045390e3523af2225c90144ea2",
           // That is the test storeID. But when you go to the production you must use your own storeID
-          storeID: "aamarpaytest",
+          storeID: "edubd",
           // Use transactionAmountFromTextField when you pass amount with TextEditingController
           // transactionAmountFromTextField: amountTextEditingController,
           transactionAmount: "200",
@@ -46,7 +48,7 @@ class _MyPayState extends State<MyPay> {
           transactionID: "${DateTime.now().millisecondsSinceEpoch}",
           description: "test",
           // When the application goes to the producation the isSandbox must be false
-          isSandBox: true,
+          isSandBox: false,
           child: isLoading
               ? Center(
                   child: CircularProgressIndicator(),
